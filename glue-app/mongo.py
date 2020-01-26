@@ -11,8 +11,14 @@ class MongoClass:
     MONGO_DB_OBJ = object()
 
     def __init__(self):
+        print ('Connecting to mongodb...')
         self.MONGO_CLIENT = MongoClient(self.MONGO_HOST, self.MONGO_PORT)
+        # self.MONGO_CLIENT = MongoClient()
         self.MONGO_DB = self.MONGO_CLIENT[self.MONGO_DB]
 
     def insert_one(self, postObj):
-        self.MONGO_DB.insert_one(postObj)
+        return self.MONGO_DB.insert_one(postObj)
+
+    def close_connection(self):
+        print ('disconnecting from mongodb...')
+        self.MONGO_CLIENT.close()

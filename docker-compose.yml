@@ -3,7 +3,7 @@ services:
     mqtt:
         image: eclipse-mosquitto
         ports:
-            - 1883
+            - 1883:1883
         links: 
             - app
         
@@ -11,10 +11,10 @@ services:
         image: mongo
         restart: always
         ports: 
-            - 27017
+            - 27017:27017
         environment:
-            MONGO_INITDB_ROOT_USERNAME: germany
-            MONGO_INITDB_ROOT_PASSWORD: germany
+            MONGO_INITDB_ROOT_USERNAME: virtualization
+            MONGO_INITDB_ROOT_PASSWORD: virtualization
             MONGO_INITDB_DATABASE: primedb
         links: 
             - app
