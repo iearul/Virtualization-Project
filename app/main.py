@@ -23,13 +23,12 @@ def publishData(startPoint, endPoint):
 
 
 def main(argv):
-    if len(argv) == 0:
-        print ("WIll get data from DB")
-    elif len(argv) == 2: 
+    if len(argv) == 2: 
         publishData(int(argv[0]), int(argv[1]))
     else:
         print ("""
-        Useage: ....
+        Useage: python3 main.py <start point> <end point>
+        example: python3 main.py 5 20
         """)
 
 if __name__ == "__main__":
