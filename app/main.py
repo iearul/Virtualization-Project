@@ -5,8 +5,8 @@ import paho.mqtt.client as mqtt
 import json, sys
 from prime_number import getPrimeNumber
 
-# BROKER_HOST = 'timber_mqtt_1'
-BROKER_HOST = 'localhost'
+BROKER_HOST = 'virt_project_mqtt_1'
+# BROKER_HOST = 'localhost'
 MQTT_TOPIC = '/t/primenumber'
 
 def publishData(startPoint, endPoint):
